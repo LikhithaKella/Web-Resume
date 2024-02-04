@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likhitha's Online Resume</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      /*background-image: url("https://wallpapers.com/images/hd/professional-background-0sqx30kiwcaxugwo.jpg");*/
+      background-image: url("https://i.pinimg.com/736x/1f/ea/6f/1fea6f1300ba8b8505d29ce3caf5612c.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-image: url("https://img.freepik.com/premium-photo/office-desk-table-with-computer-top-view-with-copy-space_146377-54.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      border: 5px solid goldenrod;
+      border-radius: 50%;
+      max-width: 150px;
+      margin: 10px;
+    }
+
+    header div {
+      text-align: left;
+      margin-left: 20px;
+      
+    }
+
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      border: 5px solid goldenrod;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1,p {
+      color: #f4f4f4;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h2{
+      color: #2c3e50;
+      font:  sans-serif;
+    }
+    p{
+      color: #333;
+      font-size: 20px;
+      
+      
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      color: #3498db;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .skill-bar {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .skill-name {
+      flex: 1;
+    }
+
+    .skill-bar-container {
+      width: 200px;
+      height: 10px;
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .skill-progress {
+      height: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg" alt="Your Photo" >
+    <h1>LIKHITHA KELLA<br><br>STUDENT</h1>
+    
+  </header>
+
+  <section id="personal-info">
+    <h2><b>PERSONAL INFORMATION :</b></h2>
+    <p>NAME: Likhitha Kella</p>
+    <p>EMAIL: likhithakella@gmail.com</p>
+    <p>PHONE: (+91) 456-7890</p>
+  </section>
+
+  <section id="education">
+    <h2><b>ACADEMIC DETAILS :</b></h2>
+    <p>Bachelor of Technology in Computer Science-2026<br>Vishnu Engineering College</p>
+    <p>Intermediate in MPC-2022 <br>Sri Chaitanya College</p>
+  </section>
+
+  <section id="work-experience">
+    <h2><b>PROJECTS :</b></h2>
+    <p>Instagram Clone<br>Language Translating App<br>Personal Portfolio<br>Netflix Homepage</p>
+  </section>
+
+  <section id="skills">
+    <h2><b>SKILLS :</b></h2>
+    <div class="skill-bar">
+      <div class="skill">
+        <div class="skill-name"><b>HTML</b></div>
+        <div class="skill-bar-container">
+          <div class="skill-progress" style="width: 70%; background-color: #3498db;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><b>CSS</b></div>
+        <div class="skill-bar-container">
+          <div class="skill-progress" style="width: 60%; background-color: #2ecc71;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><b>JavaScript</b></div>
+        <div class="skill-bar-container">
+          <div class="skill-progress" style="width: 50%; background-color: #e74c3c;"></div>
+        </div>
+      </div>
+      <!-- Add more skills as needed -->
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to toggle visibility of a section
+      function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+      }
+
+      // Add click event listeners to toggle buttons
+      const toggleBtns = document.getElementsByClassName('toggle-btn');
+      for (const btn of toggleBtns) {
+        btn.addEventListener('click', function() {
+          const sectionId = this.getAttribute('data-section');
+          toggleSection(sectionId);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
